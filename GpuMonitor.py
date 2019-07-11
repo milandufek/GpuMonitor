@@ -7,7 +7,15 @@ import subprocess
 
 import requests
 
-DEFAULT_URL = 'https://www.test.cz:8000'
+"""
+    Monitoring GPU and graphical card memory using nvidia-smi binary.
+    
+    Params:
+        -p  => period in sec
+        -u  => URL to send the stats byt get method
+"""
+
+DEFAULT_URL = 'https://localhost:8000'
 SCRIPT_DIR = r'C:\run'
 
 
