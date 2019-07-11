@@ -36,7 +36,7 @@ def access_url(url_, gpu_val, gmem_val):
         resp = requests.get(f'{url_}?cpu={gpu_val}&ram={gmem_val}')
         if resp.status_code == 200:
             script = os.path.join(SCRIPT_DIR, resp.content.decode('UTF-8').strip())
-            run_script(script)
+            return run_script(script)
         return 0
     except requests.exceptions.ConnectionError:
         print(f'Error: Cannot access URL ({url_})')
